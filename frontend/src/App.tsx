@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import { Dialog } from "./components/ui/dialog";
 import { CreateGoal } from "./components/create-goal";
 import { Summary } from "./components/summary";
@@ -11,7 +9,7 @@ export function App() {
   const { data } = useQuery({
     queryKey: ["summary"],
     queryFn: getSummary,
-    staleTime: 1000 * 60, // 60 seconds
+    staleTime: 1000 * 60,
   });
 
   return (
